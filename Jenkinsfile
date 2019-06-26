@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git(url: 'https://github.com/acorreiaveras/testRelease', branch: 'master', changelog: true)
+        git 'https://github.com/acorreiaveras/testRelease'
       }
     }
     stage('Deploy new version') {

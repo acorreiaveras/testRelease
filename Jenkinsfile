@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/acorreiaveras/testRelease'
+        git(url: 'http://jenkins.kops.0secops.com:8080/blue/organizations/jenkins/pipeline-editor/testRelease.git', branch: 'master', changelog: true)
       }
     }
     stage('Deploy new version') {
